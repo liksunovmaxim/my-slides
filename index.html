@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
+	<title>Progressive Web Apps</title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,51 +9,224 @@
 </head>
 <body class="shower list">
 
+	<style>
+		.slide h2 {
+			color: #18212e;
+		}
+		.shower{
+			color: #18212e;
+		}
+	</style>
+
 	<header class="caption">
 		<h1>Shower Presentation Engine</h1>
 		<p>Yours Truly, Famous Inc.</p>
 	</header>
 
 	<section class="slide" id="cover">
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
 		<figure>
-			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-			<figcaption class="white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
-			</figcaption>
+			<img class="cover" src="pictures/what-is-pwa-img.png" alt="Hands on the orange typewriter in a park">
 		</figure>
-		<style>
-			#cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
-				}
-			#cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
-				}
-				#cover p a {
-					color:#FFF;
-					}
-		</style>
 	</section>
 
 	<section class="slide">
-		<h2>Shower key features</h2>
-		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>Works in all modern browsers</li>
-			<li>Themes are separated from engine</li>
-			<li>Modular and extensible</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
+		<figure>
+			<img class="cover" src="pictures/prilozheniy-padaet.png" alt="">
+		</figure>
+	</section>
+
+	<section class="slide">
+		<figure>
+			<img class="cover" src="pictures/installov-umenshaetsya.png" alt="">
+		</figure>
+	</section>
+
+	<section class="slide" style="text-align: center; padding-top: 40px;">
+		<iframe src="//giphy.com/embed/l0HlBBzZ7eAV0h06Q" width="480" height="579" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/pwa-l0HlBBzZ7eAV0h06Q">via GIPHY</a></p>
+	</section>
+
+	<section class="slide">
+		<h2 style="font-size: 46px;">В целом, Progressive Web App должно быть:</h2>
+		<ol class="double">
+			<li class="next">Прогрессивным</li>
+			<li class="next">Универсальным</li>
+			<li class="next">Независимым от наличия интернета</li>
+			<li class="next">Внешне напоминать приложение</li>
+			<li class="next">Обновляемым</li>
+			<li class="next">Безопасным</li>
+			<li class="next">Узнаваемым</li>
+			<li class="next">«Затягивающим»</li>
+			<li class="next">Устанавливаемым</li>
+			<li class="next">Удобным</li>
 		</ol>
 		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+	</section>
+
+	<section class="slide">
+		<h2 style="font-size: 60px; text-align: center;">Что делает возможным Progressive Web Apps?</h2>
+		<p class="double" style="margin-top: 50px;">
+			<h2 style="letter-spacing: 2px; font-size: 80px; display: inline-block; width: 48%; text-align: center; vertical-align: middle; color: #ff5c47;" class="next">Service <br> Workers</h2>
+			<h2 style="letter-spacing: 2px; font-size: 80px; display: inline-block; width: 48%; text-align: center; vertical-align: middle; color: #498bfe;" class="next">Web App Manifest File</h2></p>
+	</section>
+
+	<section class="slide" style="text-align: center;">
+		<iframe width="791" height="445" src="https://www.youtube.com/embed/awUgAqRSxxI?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+	</section>
+
+	<section class="slide">
+		<figure>
+			<img class="cover" src="pictures/service-worker.png" alt="">
+		</figure>
+	</section>
+
+	<section class="slide">
+		<figure>
+			<img class="cover" src="pictures/sw-lifecycle.jpg" alt="">
+		</figure>
+	</section>
+
+	<section class="slide">
+		<figure>
+			<img class="cover" src="pictures/service-caniuse.png" alt="">
+		</figure>
+	</section>
+
+	<section class="slide">
+		<h2>Register Service Worker</h2>
+		<pre>
+			<code><span style="color: #a71d5d;">if</span> (<span style="color: #183691;">&lsquo;serviceWorker&rsquo;</span> <span style="color: #a71d5d;">in</span> <span style="color: #0086b3;">navigator</span>) {</code>
+			<code>  <span style="color: #0086b3;">navigator</span>.serviceWorker</code>
+			<code>  <span style="color: #795da3;">.register(<span style="color: #183691;">&lsquo;/service-worker.js&rsquo;)</span></code>
+			<code>  <span style="color: #795da3;">.then</span>(<span style="color: #a71d5d;">function</span>() { </code>
+			<code>    <span style="color: #795da3;">console</span>.<span style="color: #0086b3;">log</span>(<span style="color: #183691;">&lsquo;Service Worker Registered&rsquo;</span>); </code>
+			<code>  });</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<style>
+		.slide pre code {
+			padding: 0 0 0 58px; 
+			position: relative;
+			margin: 0;
+		}
+		.slide.lot-of-code pre code {
+			font-size: 14px;
+		}
+	</style>
+
+	<section class="slide lot-of-code" style="padding-top: 50px;">
+		<h2>service-worker.js</h2>
+		<div style="overflow-y: scroll; overflow-x: hidden; max-height: 428px;">
+			<pre style="">
+				<code>var cacheName = 'PWA-cache-v1';</code>
+				<code>var filesToCache = [</code>
+				<code>  '/',</code>
+				<code>  '/index.html',</code>
+				<code>  '/scripts/app.js',</code>
+				<code>  '/scripts/localforage-1.4.0.js',</code>
+				<code>  '/styles/all.css',</code>
+				<code>  '/images/clear.png',</code>
+				<code>  '/images/cloudy-scattered-showers.png',</code>
+				<code>  '/images/cloudy.png',</code>
+				<code>  '/images/fog.png',</code>
+				<code>  '/images/ic_add_white_24px.svg',</code>
+				<code>  '/images/ic_refresh_white_24px.svg',</code>
+				<code>  '/images/partly-cloudy.png',</code>
+				<code>  '/images/rain.png',</code>
+				<code>  '/images/scattered-showers.png',</code>
+				<code>  '/images/sleet.png',</code>
+				<code>  '/images/snow.png',</code>
+				<code>  '/images/thunderstorm.png',</code>
+				<code>  '/images/wind.png'</code>
+				<code>];</code>
+				<code> </code>
+				<code>self.addEventListener('install', function(e) {</code>
+				<code>  console.log('[ServiceWorker] Install');</code>
+				<code>  e.waitUntil(</code>
+				<code>    caches.open(cacheName).then(function(cache) {</code>
+				<code>      console.log('[ServiceWorker] Caching app shell');</code>
+				<code>      return cache.addAll(filesToCache);</code>
+				<code>    })</code>
+				<code>  );</code>
+				<code>});</code>
+				<code> </code>
+				<code>self.addEventListener('activate', function(e) {</code>
+				<code>  console.log('[ServiceWorker] Activate');</code>
+				<code>  e.waitUntil(</code>
+				<code>    caches.keys().then(function(keyList) {</code>
+				<code>      return Promise.all(keyList.map(function(key) {</code>
+				<code>        if (key !== cacheName) {</code>
+				<code>          console.log('[ServiceWorker] Removing old cache', key);</code>
+				<code>          return caches.delete(key);</code>
+				<code>        }</code>
+				<code>      }));</code>
+				<code>    })</code>
+				<code>  );</code>
+				<code>});</code>
+				<code> </code>
+				<code>self.addEventListener('fetch', function(e) {</code>
+				<code>  console.log('[ServiceWorker] Fetch', e.request.url);</code>
+				<code>  e.respondWith(</code>
+				<code>    caches.match(e.request).then(function(response) {</code>
+				<code>      return response || fetch(e.request);</code>
+				<code>     })</code>
+				<code>  );</code>
+				<code>});</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide" style="padding-top: 20px;">
+		<img class="cover" src="pictures/manifest-1.jpg" alt="">
+	</section>
+
+	<section class="slide" style="padding-top: 20px;">
+		<img class="cover" src="pictures/manifest-2.jpg" alt="">
+	</section>
+
+	<section class="slide" style="padding-top: 20px;">
+		<img class="cover" src="pictures/manifest-3.jpg" alt="">
+	</section>
+
+	<section class="slide" style="padding-top: 20px;">
+		<img class="cover" src="pictures/manifest-4.jpg" alt="">
+	</section>
+
+	<section class="slide" style="padding-top: 20px;">
+		<img class="cover" src="pictures/manifest-5.jpg" alt="">
+	</section>
+
+	<section class="slide" style="padding-top: 20px;">
+		<img class="cover" src="pictures/manifest-6.jpg" alt="">
+	</section>
+	
+	<section class="slide" style="padding-top: 20px;">
+		<img class="cover" src="pictures/manifest-7.jpg" alt="">
+	</section>
+
+	<section class="slide" style="padding-top: 20px;">
+		<img class="cover" src="pictures/manifest-8.jpg" alt="">
+	</section>
+
+	<section class="slide" style="padding-top: 20px;">
+		<img class="cover" src="pictures/manifest-9.jpg" alt="">
+	</section>
+
+	<section class="slide" style="padding-top: 20px;">
+		<img class="cover" src="pictures/manifest-10.jpg" alt="">
+	</section>
+
+	<section class="slide" style="padding-top: 20px;">
+		<img class="cover" src="pictures/manifest-11.jpg" alt="">
+	</section>
+
+	<section class="slide" style="padding-top: 20px;">
+		<img class="cover" src="pictures/manifest-12.jpg" alt="">
+	</section>
+
+	<section class="slide" style="padding-top: 20px;">
+		<img class="cover" src="pictures/appshell.jpg" alt="">
 	</section>
 
 	<section class="slide">
